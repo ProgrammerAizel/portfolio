@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aizel Linto — AI Engineer & Full Stack Developer</title>
+  <meta name="description" content="Aizel Linto — AI Engineer, Full Stack Developer, App Developer & Robotics Engineer. Building sharp digital products, applied AI systems, and mobile experiences." />
+  <meta name="keywords" content="Aizel Linto, AI Engineer, Full Stack Developer, App Developer, Robotics, React, MERN, Machine Learning, Flutter, Arduino" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"><div class="cursor-inner"></div></div>
+
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-brand">
+      <a href="#home" class="brand-link">
+        <span class="brand-bracket">&lt;/</span><span class="brand-name">Aizel</span><span class="brand-bracket"> /&gt;</span>
+      </a>
+    </div>
+    <div class="nav-links">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#skills" class="nav-link">Skills</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#experience" class="nav-link">Experience</a>
+      <a href="#contact" class="nav-link contact-cta">Contact</a>
+    </div>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-inner">
+      <a href="#home" class="mobile-link" onclick="closeMobile()">Home</a>
+      <a href="#about" class="mobile-link" onclick="closeMobile()">About</a>
+      <a href="#skills" class="mobile-link" onclick="closeMobile()">Skills</a>
+      <a href="#projects" class="mobile-link" onclick="closeMobile()">Projects</a>
+      <a href="#experience" class="mobile-link" onclick="closeMobile()">Experience</a>
+      <a href="#contact" class="mobile-link" onclick="closeMobile()">Contact</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-grid"></div>
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge magnetic" data-magnetic>
+        <span class="badge-dot"></span>
+        <span>Available for Projects</span>
+      </div>
+      <div class="hero-text-block">
+        <p class="hero-eyebrow">Hello, I'm</p>
+        <h1 class="hero-name">
+          <span class="name-line">Aizel</span>
+          <span class="name-line accent-line"><span class="accent-fill">Linto</span></span>
+        </h1>
+        <div class="hero-roles">
+          <span class="role-item active" id="role-0">AI Engineer</span>
+          <span class="role-sep">•</span>
+          <span class="role-item" id="role-1">Full Stack Developer</span>
+          <span class="role-sep">•</span>
+          <span class="role-item" id="role-2">App Developer</span>
+          <span class="role-sep">•</span>
+          <span class="role-item" id="role-3">Robotics Engineer</span>
+        </div>
+        <p class="hero-bio">Building sharp digital products, applied AI systems, and mobile experiences with a futuristic visual language and production-grade engineering.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary magnetic" data-magnetic>View Work</a>
+          <a href="#contact" class="btn-ghost magnetic" data-magnetic>Let's Talk</a>
+        </div>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-val"><span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">Years Exp.</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-val"><span class="stat-num" data-target="24">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">Projects</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-val"><span class="stat-num" data-target="12">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">AI Models</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-val"><span class="stat-num" data-target="20">0</span><span class="stat-plus">+</span></div>
+          <span class="stat-label">Clients</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Photo -->
+    <div class="float-photo-wrap" id="floatPhoto">
+      <div class="float-photo-ring"></div>
+      <div class="float-photo-ring ring-2"></div>
+      <img src="aizel.jpg" alt="Aizel Linto" class="float-photo" />
+      <div class="float-photo-glow"></div>
+      <div class="float-badge">
+        <span>✦</span> Founder · Spireclub
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- MARQUEE STRIP -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>React Native</span><span class="dot">✦</span>
+      <span>TensorFlow</span><span class="dot">✦</span>
+      <span>Flutter</span><span class="dot">✦</span>
+      <span>Node.js</span><span class="dot">✦</span>
+      <span>Arduino</span><span class="dot">✦</span>
+      <span>Python</span><span class="dot">✦</span>
+      <span>Firebase</span><span class="dot">✦</span>
+      <span>Next.js</span><span class="dot">✦</span>
+      <span>Robotics</span><span class="dot">✦</span>
+      <span>Three.js</span><span class="dot">✦</span>
+      <span>Figma</span><span class="dot">✦</span>
+      <span>MongoDB</span><span class="dot">✦</span>
+      <span>React Native</span><span class="dot">✦</span>
+      <span>TensorFlow</span><span class="dot">✦</span>
+      <span>Flutter</span><span class="dot">✦</span>
+      <span>Node.js</span><span class="dot">✦</span>
+      <span>Arduino</span><span class="dot">✦</span>
+      <span>Python</span><span class="dot">✦</span>
+      <span>Firebase</span><span class="dot">✦</span>
+      <span>Next.js</span><span class="dot">✦</span>
+      <span>Robotics</span><span class="dot">✦</span>
+      <span>Three.js</span><span class="dot">✦</span>
+      <span>Figma</span><span class="dot">✦</span>
+      <span>MongoDB</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="section about-section" id="about">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 01 — About</span>
+        <h2 class="section-title">Turning ideas into<br /><em>powerful digital experiences</em></h2>
+      </div>
+
+      <div class="about-layout">
+        <div class="about-intro reveal">
+          <p class="about-lead">I focus on AI-powered products, full stack systems, mobile apps, robotics, and refined interfaces that leave a lasting impression.</p>
+          <p class="about-body">Every project I take on is built with intention — from architecture decisions to pixel-level UI polish. I believe the best products are engineered, not assembled.</p>
+          <div class="spireclub-badge magnetic" data-magnetic>
+            <img src="proj_spireclub.png" alt="Spireclub" class="spire-thumb" />
+            <div class="spire-text">
+              <span class="spire-label">Founder &amp; CEO</span>
+              <a href="https://spireclub.vercel.app/en" target="_blank" class="spire-name">Spireclub ↗</a>
+              <span class="spire-sub">Web Design Agency</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn-primary magnetic" data-magnetic>Work With Me</a>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card" data-delay="0">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+            </div>
+            <h3>AI Engineer</h3>
+            <p>Designing intelligent systems, model workflows, and applied AI features.</p>
+          </div>
+          <div class="pillar-card" data-delay="80">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <h3>Full Stack Dev</h3>
+            <p>Building fast, scalable products from interface to infrastructure.</p>
+          </div>
+          <div class="pillar-card" data-delay="160">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+            </div>
+            <h3>App Developer</h3>
+            <p>Crafting mobile-first experiences with smooth product interactions.</p>
+          </div>
+          <div class="pillar-card" data-delay="240">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+            </div>
+            <h3>Robotics Engineer</h3>
+            <p>Building smart embedded systems, Arduino automation, and IoT solutions.</p>
+          </div>
+          <div class="pillar-card" data-delay="320">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            </div>
+            <h3>Startup Founder</h3>
+            <p>Running Spireclub — a premium web design agency building cinematic digital products.</p>
+          </div>
+          <div class="pillar-card" data-delay="400">
+            <div class="pillar-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
+            </div>
+            <h3>UI/UX Enthusiast</h3>
+            <p>Shaping polished interfaces with strong hierarchy and delightful motion.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SKILLS ═══════════════════════════ -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 02 — Skills</span>
+        <h2 class="section-title">Technologies I<br /><em>build with</em></h2>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-num">01</span>
+            <h3>MERN Stack</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">Node.js</span>
+          </div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="92"></div></div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-num">02</span>
+            <h3>Machine Learning</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">OpenCV</span>
+          </div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-num">03</span>
+            <h3>App Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">React Native</span>
+            <span class="skill-tag">Flutter</span>
+            <span class="skill-tag">Firebase</span>
+          </div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="88"></div></div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-num">04</span>
+            <h3>Backend Systems</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Authentication</span>
+          </div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-num">05</span>
+            <h3>UI/UX Design</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">UI Design</span>
+            <span class="skill-tag">Prototyping</span>
+          </div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="82"></div></div>
+        </div>
+        <div class="skill-category">
+          <div class="skill-cat-header">
+            <span class="skill-cat-num">06</span>
+            <h3>AI & Automation</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">AI Models</span>
+            <span class="skill-tag">Automation</span>
+            <span class="skill-tag">Data Analysis</span>
+          </div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="87"></div></div>
+        </div>
+        <!-- NEW: ROBOTICS -->
+        <div class="skill-category skill-highlight">
+          <div class="skill-cat-header">
+            <span class="skill-cat-num">07</span>
+            <h3>Robotics & IoT</h3>
+            <span class="skill-new-badge">NEW</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">Embedded C</span>
+            <span class="skill-tag">IoT Systems</span>
+            <span class="skill-tag">Smart Home</span>
+            <span class="skill-tag">Sensors</span>
+          </div>
+          <div class="skill-bar-wrap"><div class="skill-bar" data-width="80"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ PROJECTS ═══════════════════════════ -->
+  <section class="section projects-section" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 03 — Projects</span>
+        <h2 class="section-title">Featured<br /><em>work</em></h2>
+      </div>
+
+      <div class="projects-list">
+
+        <!-- SPIRECLUB -->
+        <div class="project-item" id="proj-spireclub">
+          <div class="project-left">
+            <span class="project-num">01</span>
+            <div class="project-info">
+              <div class="project-name-row">
+                <h3 class="project-name">Spireclub</h3>
+                <span class="proj-type-tag founder-tag">Startup</span>
+              </div>
+              <p class="project-full">Premium Web Design Agency</p>
+              <p class="project-desc">Building cinematic websites, apps &amp; AI experiences. Brand systems that feel expensive — presence, product, and intelligence.</p>
+              <div class="project-tags">
+                <span class="p-tag">Next.js</span>
+                <span class="p-tag">Web Agency</span>
+                <span class="p-tag">Branding</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-image-wrap">
+            <img src="proj_spireclub.png" alt="Spireclub" class="project-img" />
+            <div class="project-img-overlay">
+              <a href="https://spireclub.vercel.app/en" target="_blank" class="proj-live-btn">View Live ↗</a>
+            </div>
+          </div>
+          <a href="https://spireclub.vercel.app/en" target="_blank" class="project-arrow magnetic" data-magnetic aria-label="View Spireclub">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+        <!-- HMS -->
+        <div class="project-item" id="proj-hms">
+          <div class="project-left">
+            <span class="project-num">02</span>
+            <div class="project-info">
+              <div class="project-name-row">
+                <h3 class="project-name">HMS</h3>
+              </div>
+              <p class="project-full">Hospital Management System</p>
+              <p class="project-desc">A complete hospital operations platform for patients, staff, scheduling, and medical workflows with real-time dashboards.</p>
+              <div class="project-tags">
+                <span class="p-tag">MERN Stack</span>
+                <span class="p-tag">Dashboard</span>
+                <span class="p-tag">Auth</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-image-wrap">
+            <img src="proj_hms.jpg" alt="HMS" class="project-img" />
+            <div class="project-img-overlay">
+              <a href="https://hms-core-p3ut.onrender.com/" target="_blank" class="proj-live-btn">View Live ↗</a>
+            </div>
+          </div>
+          <a href="https://hms-core-p3ut.onrender.com/" target="_blank" class="project-arrow magnetic" data-magnetic aria-label="View HMS">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+        <!-- DROP DRESS -->
+        <div class="project-item" id="proj-drop">
+          <div class="project-left">
+            <span class="project-num">03</span>
+            <div class="project-info">
+              <div class="project-name-row">
+                <h3 class="project-name">Drop</h3>
+              </div>
+              <p class="project-full">Gen Z Thrift & Streetwear Store</p>
+              <p class="project-desc">Thrissur's first unisex thrift store — a bold Gen Z fashion experience with live prices, street-style drops, and instant cart-ready checkout.</p>
+              <div class="project-tags">
+                <span class="p-tag">E-Commerce</span>
+                <span class="p-tag">Gen Z Design</span>
+                <span class="p-tag">Fashion</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-image-wrap">
+            <img src="proj_drop.png" alt="Drop Dress" class="project-img" />
+            <div class="project-img-overlay">
+              <a href="https://drop-demo.vercel.app/" target="_blank" class="proj-live-btn">View Live ↗</a>
+            </div>
+          </div>
+          <a href="https://drop-demo.vercel.app/" target="_blank" class="project-arrow magnetic" data-magnetic aria-label="View Drop">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+        <!-- STORVAFIT -->
+        <div class="project-item" id="proj-storva">
+          <div class="project-left">
+            <span class="project-num">04</span>
+            <div class="project-info">
+              <div class="project-name-row">
+                <h3 class="project-name">StorvaFit</h3>
+              </div>
+              <p class="project-full">All-in-One Gym & Body Tracker</p>
+              <p class="project-desc">A modern fitness app for tracking workouts, food, and body metrics — with coach messaging, body simulation, and a gym owner workspace.</p>
+              <div class="project-tags">
+                <span class="p-tag">React Native</span>
+                <span class="p-tag">Firebase</span>
+                <span class="p-tag">Mobile</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-image-wrap">
+            <img src="proj_storvafit.png" alt="StorvaFit" class="project-img" />
+            <div class="project-img-overlay">
+              <span class="proj-live-btn no-link">Coming Soon</span>
+            </div>
+          </div>
+          <a href="#" class="project-arrow magnetic" data-magnetic aria-label="View StorvaFit">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+        <!-- SMART HOME -->
+        <div class="project-item" id="proj-smarthome">
+          <div class="project-left">
+            <span class="project-num">05</span>
+            <div class="project-info">
+              <div class="project-name-row">
+                <h3 class="project-name">Smart Home</h3>
+                <span class="proj-type-tag robotics-tag">⚙ Robotics</span>
+              </div>
+              <p class="project-full">Arduino IoT Automation System</p>
+              <p class="project-desc">A full home automation system built with Arduino — smart lighting control, temperature sensing, door locks, energy management, and remote access via mobile.</p>
+              <div class="project-tags">
+                <span class="p-tag">Arduino</span>
+                <span class="p-tag">IoT</span>
+                <span class="p-tag">Embedded C</span>
+                <span class="p-tag">Sensors</span>
+              </div>
+            </div>
+          </div>
+          <div class="project-image-wrap">
+            <img src="proj_smarthome.png" alt="Smart Home" class="project-img" />
+            <div class="project-img-overlay">
+              <span class="proj-live-btn no-link">Hardware Project</span>
+            </div>
+          </div>
+          <a href="#" class="project-arrow magnetic" data-magnetic aria-label="View Smart Home">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ EXPERIENCE ═══════════════════════════ -->
+  <section class="section experience-section" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">// 04 — Experience</span>
+        <h2 class="section-title">The journey<br /><em>so far</em></h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024 — Present</span>
+            <h3 class="timeline-role">Founder & CEO — Spireclub</h3>
+            <p class="timeline-place">Premium Web Design Agency</p>
+            <p class="timeline-desc">Running Spireclub — building cinematic websites, AI-powered apps, and brand systems for clients who refuse the generic.</p>
+            <div class="timeline-tags"><span>Next.js</span><span>Branding</span><span>AI</span><span>Agency</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2024 — Present</span>
+            <h3 class="timeline-role">AI Engineer & Full Stack Developer</h3>
+            <p class="timeline-place">Freelance / Independent</p>
+            <p class="timeline-desc">Designing and shipping AI-powered web applications, REST APIs, and mobile experiences for clients across multiple domains.</p>
+            <div class="timeline-tags"><span>Python</span><span>MERN</span><span>AI/ML</span><span>React Native</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2023 — 2024</span>
+            <h3 class="timeline-role">Robotics & Embedded Systems</h3>
+            <p class="timeline-place">Arduino / IoT Projects</p>
+            <p class="timeline-desc">Built Arduino-based smart home automation systems, IoT sensor networks, and embedded hardware projects combining software and electronics.</p>
+            <div class="timeline-tags"><span>Arduino</span><span>C++</span><span>IoT</span><span>Electronics</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2022 — 2023</span>
+            <h3 class="timeline-role">Full Stack & App Developer</h3>
+            <p class="timeline-place">Digital Projects & Startups</p>
+            <p class="timeline-desc">Built scalable web platforms with MERN stack and cross-platform mobile apps with Flutter and React Native.</p>
+            <div class="timeline-tags"><span>React</span><span>Node.js</span><span>Flutter</span><span>Firebase</span></div>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <span class="timeline-year">2021 — 2022</span>
+            <h3 class="timeline-role">Front-End Developer</h3>
+            <p class="timeline-place">Learning & Foundations</p>
+            <p class="timeline-desc">Mastered the fundamentals of web development — HTML, CSS, JavaScript, React — and shipped first client-facing interfaces.</p>
+            <div class="timeline-tags"><span>HTML/CSS</span><span>JavaScript</span><span>React</span><span>UI Design</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="contact-inner">
+        <div class="contact-text reveal">
+          <span class="section-tag">// 05 — Contact</span>
+          <h2 class="contact-headline">Let's build something<br /><em>amazing together!</em> 🚀</h2>
+          <p class="contact-sub">Have a project in mind, want to collaborate, or just say hi? My inbox is always open.</p>
+          <div class="contact-links">
+            <a href="mailto:aizel@spireclub.vercel.app" class="contact-link" id="contact-email-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              Drop an Email
+            </a>
+            <a href="https://www.instagram.com/a_izell_into" target="_blank" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              @a_izell_into
+            </a>
+            <a href="https://github.com/ProgrammerAizel" target="_blank" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              ProgrammerAizel
+            </a>
+            <a href="https://www.notion.so/alipzacreations" target="_blank" class="contact-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16v16H4z"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>
+              alipzacreations
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm" onsubmit="handleForm(event)">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Tell me about your project..." rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-w magnetic" data-magnetic id="form-submit">Send Message →</button>
+          <div class="form-success" id="formSuccess">✓ Message sent! I'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span class="brand-bracket">&lt;/</span><span class="brand-name">Aizel</span><span class="brand-bracket"> /&gt;</span>
+        </div>
+        <p class="footer-copy">© 2026 Aizel Linto. All rights reserved.</p>
+        <div class="footer-socials">
+          <a href="https://github.com/ProgrammerAizel" target="_blank" class="social-icon magnetic" data-magnetic>GH</a>
+          <a href="https://www.instagram.com/a_izell_into" target="_blank" class="social-icon magnetic" data-magnetic>IG</a>
+          <a href="https://spireclub.vercel.app/en" target="_blank" class="social-icon magnetic" data-magnetic>SC</a>
+          <a href="https://www.notion.so/alipzacreations" target="_blank" class="social-icon magnetic" data-magnetic>NT</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
